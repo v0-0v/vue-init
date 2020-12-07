@@ -1,0 +1,227 @@
+@mixin tags {
+
+  //  顶部底色
+  .home_index .top_header {
+    background-color: $light-blue;
+
+    // .el-dropdown-menu.el-popper {
+    //   border: 1px solid red;
+    // }
+    .headerTitle-warp {
+      span {
+        color: $light-font;
+      }
+    }
+
+    .handle-warp {
+      p {
+        color: $light-font;
+      }
+    }
+  }
+
+  // 底部版权
+  .contain .page-footer {
+    background-color: $light-blue;
+    color: $light-font;
+  }
+
+  // 左侧导航
+  .home_index .el-aside {
+    background: $light-blue;
+
+    /* 标准的语法 */
+    .menu {
+      background: transparent;
+      @include icon;
+
+      .el-menu {
+        background: transparent;
+
+        .el-submenu__title:hover {
+          background-color: $bg-aside;
+
+          .el-menu {
+            background: transparent;
+
+            .el-menu-item:hover {
+
+              span,
+              .myIconStyle {
+                color: #f5f5f5;
+              }
+            }
+          }
+        }
+
+        .itemBox {
+          .el-submenu__title i {
+            color: $light-font;
+          }
+
+          span,
+          .myIconStyle {
+            color: $light-font;
+          }
+
+          .el-menu-item:hover {
+            background-color: $bg-aside;
+          }
+
+          .el-menu-item.is-active {
+            background-color: $bg-aside;
+          }
+        }
+      }
+
+      .move-trigger>.el-icon-d-arrow-left {
+        color: $light-font;
+      }
+    }
+  }
+
+  // 首页背景色
+  .home {
+    .vue-grid-item.cssTransforms {
+      background-color: rgba(12, 37, 58, 0.1);
+      border: 1px solid rgba(12, 37, 58, 0.2) !important;
+      border-radius: 10px;
+
+      .el-card {
+        .el-card__header {
+          // border-bottom: 1px solid rgba(12, 37, 58, 0.2) !important;
+          border-bottom: none;
+          background-color: rgba(12, 37, 58, 0.2);
+
+          .name {
+            color: $color-lightblue;
+          }
+
+          .el-icon-edit-outline {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+
+  // tags标签
+  .tags-view-container {
+    margin-bottom: 0;
+    background-color: $background-base;
+    border-bottom: 0;
+    box-shadow: none;
+
+    .el-scrollbar__bar.is-horizontal {
+      background-color: transparent !important;
+    }
+
+    .el-scrollbar__thumb {
+      background-color: rgba(0, 0, 0, 0.43) !important;
+    }
+
+    .contextmenu {
+      background-color: rgba(12, 37, 58, 0.9);
+      color: #fff;
+
+      li:hover {
+        background-color: #99D1D2;
+      }
+    }
+
+
+    .el-scrollbar__bar.is-horizontal {
+      background: #FFF;
+      z-index: 99;
+      bottom: 0px;
+
+      .el-scrollbar__thumb {
+        background: rgb(0, 0, 0);
+      }
+    }
+
+
+    .el-scrollbar__wrap {
+      padding: 5px 20px;
+
+      .tags-view-item.active,
+      .tags-view-item:hover {
+        z-index: 999;
+        border-color: #6EC3C8;
+        background-color: #6EC3C8;
+        // border-color: $bg-aside;
+        // background-color: $bg-aside;
+        border-color: rgb(231, 233 ,249);
+        background-color: rgb(231, 233 ,249);
+
+        .tag-left,
+        .tag-right {
+          // border-bottom: 31px solid $bg-aside;
+          border-bottom:  31px solid rgb(231, 233 ,249);
+        }
+
+        .el-icon-close {
+          visibility: visible;
+        }
+
+        .el-icon-close:before {
+          content: "\E60F";
+          background-color: red;
+          border-radius: 50%;
+        }
+      }
+
+      .tags-view-item {
+        padding: 2px 0;
+        margin: 0 15px;
+        height: 27px;
+        line-height: 31px;
+        color: $light-font;
+        border: none;
+        border-color: rgb(229, 230, 232);
+        background-color: rgb(229, 230, 232);
+
+        .tag-left {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-bottom: 31px solid rgb(229, 230, 232);
+          border-left: 31px solid transparent;
+          position: absolute;
+          top: 0;
+          left: -31px;
+          z-index: 3;
+        }
+
+        .tag-right {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-bottom: 31px solid rgb(229, 230, 232);
+          border-right: 31px solid transparent;
+          position: absolute;
+          top: 0;
+          right: -31px;
+          z-index: 3;
+        }
+
+        .el-icon-close {
+          visibility: hidden;
+        }
+      }
+    }
+
+    .contextmenu {
+      background-color: $drop-bg;
+
+      li {
+        color: $light-font;
+      }
+
+      li:hover {
+        color: $light-font;
+        background-color: $drop-hoverbg;
+      }
+    }
+  }
+}

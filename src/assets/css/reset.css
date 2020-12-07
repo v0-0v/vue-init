@@ -1,0 +1,63 @@
+@charset "UTF-8";
+html,
+body,
+div,
+p,
+span,
+table,
+i,
+a,
+ul,
+li,
+input {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+}
+
+#app .el-container,
+#app .el-aside,
+#app .el-main {
+  height: 100%;
+}
+
+#app .el-main {
+  overflow: hidden;
+}
+
+#app .el-input__inner {
+  height: 32px;
+}
+
+.clearfix:after {
+  content: ".";
+  /*加一段内容*/
+  display: block;
+  /*让生成的元素以块级元素显示，占满剩余空间*/
+  height: 0;
+  /*避免生成的内容破坏原有布局高度*/
+  clear: both;
+  /*清除浮动*/
+  visibility: hidden;
+  /*让生成的内容不可见*/
+}
+
+.clearfix {
+  zoom: 1;
+  /*为IE6，7的兼容性设置*/
+}
+

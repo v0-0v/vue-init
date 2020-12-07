@@ -1,0 +1,12 @@
+[
+	{
+		"name": "首页",
+		"id": "0",
+		"code": "00",
+		"path": "/",
+		"icon": "icon-img1",
+		"component": "home/index",
+		"componentName": "home",
+		"routerPath": "/"
+	}
+]

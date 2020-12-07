@@ -1,0 +1,29 @@
+// 新增修改弹框样式
+.add-edit-form{
+  .el-dialog{
+    border-radius: 5px;
+    .el-dialog__header{
+      //background:#F1F9FB;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      .el-dialog__title{
+        font-size: 20px;
+      }
+    }
+    .el-dialog__body{
+      max-height: 550px;
+      overflow: auto;
+    }
+    .el-dialog__footer{
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      //background:#F1F9FB;
+      //padding: 10px ;
+      .dialog-footer{
+        .el-button{
+          margin:0 10px;
+        }
+      }
+    }
+  }
+}

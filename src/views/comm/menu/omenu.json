@@ -1,0 +1,408 @@
+[
+  {
+    "name": "首页",
+    "id": "1",
+    "path": "/",
+    "icon": "el-icon-menu"
+  },
+  {
+    "name": "系统管理",
+    "id": "2",
+    "path": "/systemManagement",
+    "icon": "el-icon-location",
+    "children": [
+      {
+        "name": "用户管理",
+        "id": "2-1",
+        "path": "/systemManagement/userManagement",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "角色管理",
+        "id": "2-2",
+        "path": "/systemManagement/roleManagement",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "机构管理",
+        "id": "2-3",
+        "path": "/systemManagement/organizationalManagement",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "功能管理",
+        "id": "2-4",
+        "path": "/systemManagement/functionManagement",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "资源管理",
+        "id": "2-5",
+        "path": "/systemManagement/resourceManagement",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "系统运行",
+        "id": "2-6",
+        "path": "/systemManagement/systemOperation",
+        "icon": "el-icon-location"
+      }
+    ]
+  },
+  {
+    "name": "数据管理",
+    "id": "1",
+    "path": "/dataManage",
+    "icon": "el-icon-location",
+    "children": [
+      {
+        "name": "超级搜索",
+        "id": "1-7",
+        "path": "/dataManage/searchEngine",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "重点人员数据",
+        "id": "1-2",
+        "path": "/dataManage/keyPerson",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "信息补录",
+        "id": "1-8",
+        "path": "/dataManage/infoRecord",
+        "icon": "el-icon-location"
+      },
+      {
+        "name": "基础算法",
+        "id": "1-9",
+        "path": "/dataManage/basicAlgorithm",
+        "icon": "el-icon-location"
+      }
+    ]
+  },
+  {
+    "name": "数据统计",
+    "id": "2",
+    "path": "/",
+    "icon": "el-icon-menu"
+  },
+  {
+    "name": "实时数据展示",
+    "id": "3",
+    "path": "/",
+    "icon": "el-icon-document"
+  },
+  {
+    "name": "分析预测",
+    "id": "4",
+    "path": "/",
+    "icon": "el-icon-setting"
+  },
+  {
+    "name": "省厅报表",
+    "id": "5",
+    "path": "/",
+    "icon": "el-icon-setting",
+    "children": [
+      {
+        "name": "报警",
+        "id": "5-1",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "01报警表",
+            "id": "5-1-1",
+            "path": "/report/01",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "行政",
+        "id": "5-2",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "27行政案件表",
+            "id": "5-2-1",
+            "path": "/report/27",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "监管",
+        "id": "5-3",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "31KS0001",
+            "id": "5-3-1",
+            "path": "/report/31",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "32KS0002",
+            "id": "5-3-2",
+            "path": "/report/32",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "33KS0003",
+            "id": "5-3-3",
+            "path": "/report/33",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "34KS0004",
+            "id": "5-3-4",
+            "path": "/report/34",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "35KS0005",
+            "id": "5-3-5",
+            "path": "/report/35",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "36KS0007",
+            "id": "5-3-6",
+            "path": "/",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "收缴",
+        "id": "5-4",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "28收缴罚没表",
+            "id": "5-4-1",
+            "path": "/",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "刑事",
+        "id": "5-5",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "02刑事综合表",
+            "id": "5-5-1",
+            "path": "/report/02",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "03刑事综合附表",
+            "id": "5-5-2",
+            "path": "/report/03",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "04危害公共安全立案表",
+            "id": "5-5-3",
+            "path": "/report/04",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "05危害公共安全破案表",
+            "id": "5-5-4",
+            "path": "/report/05",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "06经济案件立案表",
+            "id": "5-5-5",
+            "path": "/report/06",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "07经济案件立案表续一",
+            "id": "5-5-6",
+            "path": "/report/07",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "08经济案件立案表续二",
+            "id": "5-5-7",
+            "path": "/report/08",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "09经济案件立案表续三",
+            "id": "5-5-8",
+            "path": "/report/09",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "10经济案件破案表",
+            "id": "5-5-9",
+            "path": "/report/10",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "11经济案件破案表续一",
+            "id": "5-5-10",
+            "path": "/report/11",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "12经济案件破案表续二",
+            "id": "5-5-11",
+            "path": "/report/12",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "13经济案件破案表续三",
+            "id": "5-5-12",
+            "path": "/report/13",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "14侵权立案表",
+            "id": "5-5-13",
+            "path": "/report/14",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "15侵权破案表",
+            "id": "5-5-14",
+            "path": "/report/15",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "16侵财立案表",
+            "id": "5-5-15",
+            "path": "/report/16",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "17侵财破案表",
+            "id": "5-5-16",
+            "path": "/report/17",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "18妨害社会管理秩序立案表",
+            "id": "5-5-17",
+            "path": "/report/18",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "19妨害社会管理秩序破案表",
+            "id": "5-5-18",
+            "path": "/report/19",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "20妨害社会管理秩序补充表",
+            "id": "5-5-19",
+            "path": "/report/20",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "21拐卖妇女儿童表",
+            "id": "5-5-20",
+            "path": "/",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "22涉枪及危险物品表",
+            "id": "5-5-21",
+            "path": "/",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "23刑事毒品案件表",
+            "id": "5-5-22",
+            "path": "/",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "刑事抓获人员",
+        "id": "5-6",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "24抓获刑事作案成员表",
+            "id": "5-6-1",
+            "path": "/",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "25抓获毒品作案成员表",
+            "id": "5-6-2",
+            "path": "/report/25",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "治安",
+        "id": "5-7",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "26治安案件表",
+            "id": "5-7-1",
+            "path": "/",
+            "icon": "el-icon-location"
+          }
+        ]
+      },
+      {
+        "name": "抓获处理、逮捕",
+        "id": "5-8",
+        "path": "/",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "29抓获处理表",
+            "id": "5-8-1",
+            "path": "/",
+            "icon": "el-icon-location"
+          },
+          {
+            "name": "30逮捕表",
+            "id": "5-8-1",
+            "path": "/",
+            "icon": "el-icon-location"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "系统管理",
+    "id": "6",
+    "path": "/",
+    "icon": "el-icon-setting"
+  },
+  {
+    "name": "系统设置",
+    "id": "7",
+    "path": "/",
+    "icon": "el-icon-setting"
+  },
+  {
+    "name": "数据可视化",
+    "id": "8",
+    "path": "/",
+    "icon": "el-icon-setting"
+  }
+]

@@ -1,0 +1,58 @@
+
+.form-group {
+	border-bottom: 2px solid windowtext;
+	margin: 10px auto;
+	position: relative;
+
+	.form-table {
+		display: flex;
+		flex: 1;
+		overflow: hidden;
+		align-items: center;
+		border-bottom: 1px solid windowtext;
+		.remark {
+			text-align: left;
+			height: 20px;
+			line-height: 20px;
+		}
+	}
+}
+
+
+.updated {
+	color: red !important;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: calc(100% - 2px);
+	padding: 1px 0;
+
+	p {
+		font-size: 9.0pt;
+		text-align: center;
+	}
+
+	&.center {
+		justify-content: center;
+	}
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: calc(100% - 2px);
+	padding: 0 1px;
+}
+
+p {
+	&.left {
+		text-align: left;
+	}
+	&.right {
+		text-align: right;
+	}
+}

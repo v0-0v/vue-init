@@ -1,0 +1,1 @@
+html,body,div,p,span,table,i,a,ul,li,input{padding:0;margin:0}input{border:0}html,body{width:100%;height:100%;overflow:hidden}#app{height:100vh}#app .el-container,#app .el-aside,#app .el-main{height:100%}#app .el-main{overflow:hidden}#app .el-input__inner{height:32px}.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}.clearfix{zoom:1}

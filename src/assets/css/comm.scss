@@ -1,0 +1,259 @@
+.operation-bar {
+	background-color: #f0faf8;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.standing {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.standing-bar {
+		background-color: #f0faf8;
+		padding: 5px 10px;
+
+		.el-form-item {
+			margin-bottom: 6px;
+		}
+
+		.search-box {
+			.el-form-item {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.standing-list {
+		flex: 1;
+		height: 100%;
+		overflow: hidden; //解决页面抖动问题
+
+		.list {
+			height: calc(100% - 85px);
+
+		}
+
+		.pagination {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.hg-dailgo-bg {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+
+	.vdr {
+		touch-action: none;
+	}
+
+	.handle,
+	.vdr {
+		position: absolute;
+		box-sizing: border-box;
+	}
+
+	.handle {
+		width: 10px;
+		height: 10px;
+		background: #eee;
+		border: 1px solid #333;
+		opacity: 0;
+		display: block !important;
+	}
+
+	.handle-tl {
+		top: -10px;
+		left: -10px;
+		cursor: nw-resize;
+	}
+
+	.handle-tm {
+		top: -10px;
+		left: 50%;
+		margin-left: -5px;
+		cursor: n-resize;
+	}
+
+	.handle-tr {
+		top: -10px;
+		right: -10px;
+		cursor: ne-resize;
+	}
+
+	.handle-ml {
+		left: -10px;
+		cursor: w-resize;
+	}
+
+	.handle-ml,
+	.handle-mr {
+		top: 50%;
+		margin-top: -5px;
+	}
+
+	.handle-mr {
+		right: -10px;
+		cursor: e-resize;
+	}
+
+	.handle-bl {
+		bottom: -10px;
+		left: -10px;
+		cursor: sw-resize;
+	}
+
+	.handle-bm {
+		bottom: -10px;
+		left: 50%;
+		margin-left: -5px;
+		cursor: s-resize;
+	}
+
+	.handle-br {
+		bottom: -10px;
+		right: -10px;
+		cursor: se-resize;
+	}
+
+	@media only screen and (max-width: 768px) {
+		[class*="handle-"]:before {
+			content: "";
+			left: -10px;
+			right: -10px;
+			bottom: -10px;
+			top: -10px;
+			position: absolute;
+		}
+	}
+}
+
+.pop {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.3;
+}
+
+.hg-dailgo-bg-resize {
+	border-radius: 10px;
+}
+
+.hg-dailgo {
+	min-height: 350px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.dailgo-header {
+		height: 20px;
+		padding: 10px 20px;
+		line-height: 20px;
+		background-color: #f0faf8;
+		cursor: move;
+	}
+
+	.dailgo-content {
+		padding: 20px;
+		flex: 1;
+		overflow: auto !important;
+		height: calc(100% - 90px);
+		/*display: flex;*/
+		/*align-items: center;*/
+		/*justify-content: center;*/
+	}
+
+	.hg-max {
+		position: absolute;
+		right: 40px;
+		cursor: pointer;
+	}
+
+	.hg-close {
+		position: absolute;
+		right: 20px;
+		cursor: pointer;
+	}
+
+	.hg-dialog-footer {
+		width: 100%;
+		text-align: right
+	}
+
+	.dialog-footer {
+		flex-direction: row;
+		height: 20px;
+		padding: 15px 20px;
+		line-height: 20px;
+		background-color: #f0faf8;
+		display: flex;
+		align-items: center;
+	}
+}
+
+
+// 添加shadow
+.el-cascader-menu,
+.el-select-dropdown {
+	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+}
+
+
+.largeFullScren {
+	position: fixed !important;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999999;
+}
+
+/*popover纵向滚动条*/
+.customW {
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+/*穿梭狂样式设置*/
+.el-transfer-panel,
+.el-transfer-panel__body {
+	width: 330px;
+	min-width: 330px;
+	height: 530px;
+}
+
+.el-transfer-panel__list.is-filterable {
+	height: 428px;
+}
+
+.el-transfer__buttons {
+	padding: 0 40px;
+}
+
+.el-transfer__button {
+	width: 50px;
+	height: 50px;
+}
+
+.el-transfer__button:first-child {
+	margin-bottom: 30px;
+}
+
+.el-transfer {
+	width: 800px;
+	margin: 0 auto;
+}
+
+/* 解决element-ui的table表格控件表头与内容列不对齐问题 */
+.el-table th.gutter {
+	display: table-cell !important;
+}

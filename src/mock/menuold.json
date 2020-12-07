@@ -1,0 +1,645 @@
+[
+	{
+		"name": "首页",
+		"id": "0",
+		"path": "/",
+		"icon": "el-icon-menu",
+		"component": "home/index",
+		"componentName": "home",
+		"routerPath": "/"
+	},
+	{
+		"name": "数据管理",
+		"id": "1",
+		"path": "/dataManage",
+		"icon": "el-icon-location",
+		"component": "dataManage/index",
+		"componentName": "dataManage",
+		"routerPath": "dataManage",
+		"leaf": true,
+		"children": [
+			{
+				"name": "110警情数据",
+				"id": "1-1",
+				"path": "/dataManage/policeData",
+				"icon": "el-icon-location",
+				"component": "dataManage/policeData/index",
+				"componentName": "policeData",
+				"routerPath": "policeData"
+			},
+			{
+				"name": "超级搜索",
+				"id": "1-7",
+				"path": "/dataManage/searchEngine",
+				"icon": "el-icon-location",
+				"component": "dataManage/searchEngine/index",
+				"componentName": "searchEngine",
+				"routerPath": "searchEngine"
+			},
+			{
+				"name": "重点人员数据",
+				"id": "1-2",
+				"path": "/dataManage/keyPerson",
+				"icon": "el-icon-location",
+				"component": "dataManage/keyPerson/index",
+				"componentName": "keyPerson",
+				"routerPath": "keyPerson"
+			},
+			{
+				"name": "信息补录",
+				"id": "1-8",
+				"path": "/dataManage/infoRecord",
+				"icon": "el-icon-location",
+				"component": "dataManage/infoRecord/index",
+				"componentName": "infoRecord",
+				"routerPath": "infoRecord"
+			}
+		]
+	},
+	{
+		"name": "评估指标配置",
+		"id": "9",
+		"path": "/assessConfig",
+		"icon": "el-icon-menu",
+		"component": "assessConfig/index",
+		"componentName": "assessConfig",
+		"routerPath": "assessConfig",
+		"leaf": true,
+		"children": [
+			{
+				"name": "算法配置",
+				"id": "9-1",
+				"path": "/assessConfig/algorithmConfig",
+				"icon": "el-icon-location",
+				"component": "assessConfig/algorithmConfig/index",
+				"componentName": "algorithmConfig",
+				"routerPath": "algorithmConfig"
+			},
+			{
+				"name": "算法公式配置",
+				"id": "9-2",
+				"path": "/assessConfig/mathConfig",
+				"icon": "el-icon-location",
+				"component": "assessConfig/mathConfig/index",
+				"componentName": "mathConfig",
+				"routerPath": "mathConfig"
+			},
+			{
+				"name": "爆点指标配置",
+				"id": "9-3",
+				"path": "/assessConfig/pointConfig",
+				"icon": "el-icon-location",
+				"component": "assessConfig/pointConfig/index",
+				"componentName": "pointConfig",
+				"routerPath": "pointConfig"
+			},
+			{
+				"name": "评估指标配置",
+				"id": "9-4",
+				"path": "/assessConfig/assessMain",
+				"icon": "el-icon-location",
+				"component": "assessConfig/assessMain/index",
+				"componentName": "assessMain",
+				"routerPath": "assessMain"
+			},
+			{
+				"name": "时段配置",
+				"id": "9-5",
+				"path": "/assessConfig/dateConfig",
+				"icon": "el-icon-location",
+				"component": "assessConfig/dateConfig/index",
+				"componentName": "dateConfig",
+				"routerPath": "dateConfig"
+			}
+		]
+	},
+	{
+		"name": "统计分析",
+		"id": "2",
+		"path": "/",
+		"icon": "el-icon-menu",
+		"leaf": true,
+		"children": [
+			{
+				"name": "重点人员异动",
+				"id": "2-1",
+				"path": "/",
+				"leaf": true,
+				"children": [
+					{
+						"name": "敏感地区人员在浙情况",
+						"id": "2-1-1",
+						"meta": {
+							"title": "在浙数据分析"
+						},
+						"path": "/dataRange",
+						"icon": "el-icon-menu",
+						"component": "statistics/people/dataRange/index",
+						"componentName": "dataRange",
+						"routerPath": "dataRange"
+					}
+				]
+			},
+			{
+				"name": "敏感时段统计",
+				"id": "2-7",
+				"path": "/sensitiveTime",
+				"component": "statistics/sensitiveTime/index",
+				"componentName": "sensitiveTime",
+				"routerPath": "sensitiveTime",
+				"leaf": true
+			},
+			{
+				"name": "警情评估",
+				"id": "2-2",
+				"path": "/policeEvaluate",
+				"component": "statistics/policeEvaluate/index",
+				"componentName": "policeEvaluate",
+				"routerPath": "policeEvaluate",
+				"leaf": true
+			},
+			{
+				"name": "警情地图分析",
+				"id": "2-3",
+				"path": "/policePgis",
+				"component": "statistics/policePgis/index",
+				"componentName": "policePgis",
+				"routerPath": "policePgis"
+			}
+		]
+	},
+	{
+		"name": "评估预测",
+		"id": "4",
+		"path": "/",
+		"icon": "el-icon-menu",
+		"component": "forecast/index",
+		"routerPath": "forecast",
+		"componentName": "forecast",
+		"leaf": true,
+		"children": [
+			{
+				"name": "评估指标PGIS",
+				"id": "4-1",
+				"path": "/forecast/pgis",
+				"icon": "el-icon-menu",
+				"component": "forecast/pgis/index",
+				"componentName": "pgis",
+				"routerPath": "pgis"
+			},
+			{
+				"name": "警情时空预测",
+				"id": "4-2",
+				"path": "/forecast/heatMap",
+				"icon": "el-icon-location",
+				"component": "forecast/heatMap/index",
+				"componentName": "heatMap",
+				"routerPath": "heatMap"
+			}
+		]
+	},
+	{
+		"name": "省厅报表",
+		"id": "5",
+		"path": "/",
+		"icon": "el-icon-setting",
+		"component": "report/index",
+		"componentName": "report",
+		"routerPath": "report",
+		"leaf": true,
+		"children": [
+			{
+				"name": "报警",
+				"path": "/",
+				"component": "report/list/index",
+				"componentName": "reportList",
+				"routerPath": ":id",
+				"meta": {
+					"type": {
+						"01": {
+							"name": "报警情况统计月报表",
+							"id": "5-1-1"
+						},
+						"02": {
+							"name": "刑事案件综合统计月报表",
+							"id": "5-5-1"
+						},
+						"03": {
+							"name": "03刑事综合附表",
+							"id": "5-1-3"
+						},
+						"04": {
+							"name": "04危害公共安全立案表",
+							"id": "5-1-4"
+						},
+						"05": {
+							"name": "05危害公共安全破案表",
+							"id": "5-1-5"
+						},
+						"06": {
+							"name": "06经济案件立案表"
+						},
+						//						"07": {
+						//							"name": "07经济案件立案表续一"
+						//						},
+						//						"08": {
+						//							"name": "08经济案件立案表续二"
+						//						},
+						//						"09": {
+						//							"name": "09经济案件立案表续三"
+						//						},
+						"10": {
+							"name": "10经济案件破案表"
+						},
+						"11": {
+							"name": "11经济案件破案表续一"
+						},
+						"12": {
+							"name": "12经济案件破案表续二"
+						},
+						"13": {
+							"name": "13经济案件破案表续三"
+						},
+						"14": {
+							"name": "14侵权立案表"
+						},
+						"15": {
+							"name": "15侵权破案表"
+						},
+						"16": {
+							"name": "16侵财立案表"
+						},
+						"17": {
+							"name": "17侵财破案表"
+						},
+						"18": {
+							"name": "18妨害社会管理秩序立案表"
+						},
+						"19": {
+							"name": "19妨害社会管理秩序破案表"
+						},
+						"20": {
+							"name": "20妨害社会管理秩序补充表"
+						},
+						"21": {
+							"name": "21拐卖妇女儿童表"
+						},
+						"22": {
+							"name": "22涉枪及危险物品表"
+						},
+						"24": {
+							"name": "抓获刑事案件作案成员月表"
+						},
+						"25": {
+							"name": "抓获毒品作案成员表"
+						},
+						"27": {
+							"name": "行政案件统计月报表"
+						},
+						"31": {
+							"name": "拘留所被拘留人情况统计月报表"
+						},
+						"32": {
+							"name": "看守所在押人员统计月报表"
+						},
+						"33": {
+							"name": "强制医疗所收治人员情况统计月报表"
+						},
+						"34": {
+							"name": "收容教育所收教情况统计月报表"
+						},
+						"35": {
+							"name": "强制隔离戒毒所收治情况统计月报表"
+						},
+						"36": {
+							"name": "监管场所在押人员管理情况统计季报表"
+						}
+					}
+				},
+				"leaf": true,
+				"show": false
+			},
+			{
+				"name": "报警",
+				"id": "5-1",
+				"path": "/",
+				"icon": "el-icon-location",
+				"leaf": true,
+				"children": [
+					{
+						"name": "01报警表",
+						"id": "5-1-1",
+						"path": "/report/01",
+						"icon": "el-icon-location"
+					}
+				]
+			},
+			{
+				"name": "行政",
+				"id": "5-2",
+				"path": "/",
+				"icon": "el-icon-location",
+				"leaf": true,
+				"children": [
+					{
+						"name": "27行政案件表",
+						"id": "5-2-1",
+						"path": "/report/27",
+						"icon": "el-icon-location"
+					}
+				]
+			},
+			{
+				"name": "监管",
+				"id": "5-3",
+				"path": "/",
+				"icon": "el-icon-location",
+				"leaf": true,
+				"children": [
+					{
+						"name": "31KS0001",
+						"id": "5-3-1",
+						"path": "/report/31",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "32KS0002",
+						"id": "5-3-2",
+						"path": "/report/32",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "33KS0003",
+						"id": "5-3-3",
+						"path": "/report/33",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "34KS0004",
+						"id": "5-3-4",
+						"path": "/report/34",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "35KS0005",
+						"id": "5-3-5",
+						"path": "/report/35",
+						"icon": "el-icon-location"
+					}
+				]
+			},
+			{
+				"name": "刑事",
+				"id": "5-5",
+				"path": "/",
+				"icon": "el-icon-location",
+				"leaf": true,
+				"children": [
+					{
+						"name": "02刑事综合表",
+						"id": "5-5-1",
+						"path": "/report/02",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "03刑事综合附表",
+						"id": "5-5-2",
+						"path": "/report/03",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "04危害公共安全立案表",
+						"id": "5-5-3",
+						"path": "/report/04",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "05危害公共安全破案表",
+						"id": "5-5-4",
+						"path": "/report/05",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "06经济案件立案表",
+						"id": "5-5-5",
+						"path": "/report/06",
+						"icon": "el-icon-location"
+					},
+//					{
+					//						"name": "07经济案件立案表续一",
+					//						"id": "5-5-6",
+					//						"path": "/report/07",
+					//						"icon": "el-icon-location"
+					//					},
+					//					{
+					//						"name": "08经济案件立案表续二",
+					//						"id": "5-5-7",
+					//						"path": "/report/08",
+					//						"icon": "el-icon-location"
+					//					},
+					//					{
+					//						"name": "09经济案件立案表续三",
+					//						"id": "5-5-8",
+					//						"path": "/report/09",
+					//						"icon": "el-icon-location"
+					//					},
+					{
+						"name": "10经济案件破案表",
+						"id": "5-5-9",
+						"path": "/report/10",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "11经济案件破案表续一",
+						"id": "5-5-10",
+						"path": "/report/11",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "12经济案件破案表续二",
+						"id": "5-5-11",
+						"path": "/report/12",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "13经济案件破案表续三",
+						"id": "5-5-12",
+						"path": "/report/13",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "14侵权立案表",
+						"id": "5-5-13",
+						"path": "/report/14",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "15侵权破案表",
+						"id": "5-5-14",
+						"path": "/report/15",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "16侵财立案表",
+						"id": "5-5-15",
+						"path": "/report/16",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "17侵财破案表",
+						"id": "5-5-16",
+						"path": "/report/17",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "18妨害社会管理秩序立案表",
+						"id": "5-5-17",
+						"path": "/report/18",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "19妨害社会管理秩序破案表",
+						"id": "5-5-18",
+						"path": "/report/19",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "20妨害社会管理秩序补充表",
+						"id": "5-5-19",
+						"path": "/report/20",
+						"icon": "el-icon-location"
+					},
+					{
+						"name": "21拐卖妇女儿童表",
+						"id": "5-5-20",
+						"path": "/report/21",
+						"icon": "el-icon-location"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "系统管理",
+		"id": "6",
+		"path": "/systemManagement",
+		"icon": "el-icon-setting",
+		"component": "systemManagement/index",
+		"componentName": "systemManagement",
+		"routerPath": "systemManagement",
+		"leaf": true,
+		"children": [
+			{
+				"name": "通用字典配置",
+				"id": "6-0",
+				"path": "/systemManagement/sysDicComms",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/sysDicComms/index",
+				"componentName": "sysDicComms",
+				"routerPath": "sysDicComms"
+			},
+			{
+				"name": "用户管理",
+				"id": "6-1",
+				"path": "/systemManagement/userManagement",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/userManagement/index",
+				"componentName": "userManagement",
+				"routerPath": "userManagement"
+			},
+			{
+				"name": "角色管理",
+				"id": "6-2",
+				"path": "/systemManagement/roleManagement",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/roleManagement/index",
+				"componentName": "roleManagement",
+				"routerPath": "roleManagement"
+			},
+			{
+				"name": "机构管理",
+				"id": "6-3",
+				"path": "/systemManagement/organizationalManagement",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/organizationalManagement/index",
+				"componentName": "organizationalManagement",
+				"routerPath": "organizationalManagement"
+			},
+			{
+				"name": "功能管理",
+				"id": "6-4",
+				"path": "/systemManagement/functionManagement",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/functionManagement/index",
+				"componentName": "functionManagement",
+				"routerPath": "functionManagement"
+			},
+			{
+				"name": "资源管理",
+				"id": "6-5",
+				"path": "/systemManagement/resourceManagement",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/resourceManagement/index",
+				"componentName": "resourceManagement",
+				"routerPath": "resourceManagement"
+			},
+			{
+				"name": "系统运行",
+				"id": "6-6",
+				"path": "/systemManagement/systemOperation",
+				"icon": "el-icon-setting",
+				"component": "systemManagement/systemOperation/index",
+				"componentName": "systemOperation",
+				"routerPath": "systemOperation"
+			}
+		]
+	},
+	{
+		"name": "日志管理",
+		"id": "7",
+		"path": "/logManagement",
+		"icon": "el-icon-setting",
+		"component": "logManagement/index",
+		"componentName": "logManagement",
+		"routerPath": "logManagement",
+		"leaf": true,
+		"children": [
+			{
+				"name": "行为日志",
+				"id": "7-1",
+				"path": "/logManagement/behaviorDiary",
+				"icon": "el-icon-setting",
+				"component": "logManagement/behaviorDiary/index",
+				"componentName": "behaviorDiary",
+				"routerPath": "behaviorDiary"
+			},
+			{
+				"name": "接口日志",
+				"id": "7-2",
+				"path": "/logManagement/interfaceLog",
+				"icon": "el-icon-setting",
+				"component": "logManagement/interfaceLog/index",
+				"componentName": "interfaceLog",
+				"routerPath": "interfaceLog"
+			},
+			{
+				"name": "日志统计",
+				"id": "7-3",
+				"path": "/logManagement/logStatistics",
+				"icon": "el-icon-setting",
+				"component": "logManagement/logStatistics/index",
+				"componentName": "logStatistics",
+				"routerPath": "logStatistics"
+			},
+			{
+				"name": "日志分析",
+				"id": "7-4",
+				"path": "/logManagement/logAnalysis",
+				"icon": "el-icon-setting",
+				"component": "logManagement/logAnalysis/index",
+				"componentName": "logAnalysis",
+				"routerPath": "logAnalysis"
+			}
+		]
+	}
+]

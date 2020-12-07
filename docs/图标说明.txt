@@ -1,0 +1,30 @@
+
+1、button图标配置：
+如：<el-button icon="el-hg-icon-add">新增</el-button>
+
+新增： el-hg-icon-add
+修改： el-hg-icon-edit
+删除： el-hg-icon-delete
+详情： el-hg-icon-detail
+查询： el-hg-icon-query
+统计： el-hg-icon-stat
+保存： el-hg-icon-save
+刷新： el-hg-icon-refreash
+
+
+审核： el-hg-icon-audit
+退审： el-hg-icon-auditcancle
+关闭： el-hg-icon-close
+上报： el-hg-icon-upload
+导入： el-hg-icon-uploadfile
+导出： el-hg-icon-downloadfile
+启用： el-hg-icon-start
+停用： el-hg-icon-stop
+汇总： el-hg-icon-sum
+退回： el-hg-icon-sumcancle
+定位： el-hg-icon-location
+前进： el-hg-icon-pre
+后退： el-hg-icon-back
+
+
+

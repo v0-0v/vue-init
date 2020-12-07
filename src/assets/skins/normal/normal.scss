@@ -1,0 +1,34 @@
+$background-base: transparent;
+$background-input: rgba(79, 124, 175, .10);
+$balck-color: #000;
+$background-snow: #ffffff; // 白色背景色
+$color-lightblue: #fff; //导航栏浅蓝色文字
+$border-tansparent: #ffffff1a; //边框白色透明色
+$drop-bg: rgba(255, 255, 255, 0.9); //下拉框背景色
+// $drop-hoverbg: rgba(52, 130, 197, 1); //下拉框选中颜色
+$drop-hoverbg: rgba(17, 44, 199, 0.1); //下拉框选中颜色
+$bg-aside: rgba(17, 44, 199, 0.1); //左侧菜单选中色
+$light-blue:rgba(24, 91, 236, 0.1);
+$light-font:rgb(86, 87, 88);
+
+@mixin icon {
+
+	span,
+	.myIconStyle {
+		color: $color-lightblue;
+	}
+}
+
+@import './base.scss';
+@import './tags.scss';
+@import './details.scss';
+
+.normal {
+	background: url('./img/glass3.png') no-repeat center top fixed;
+	background-size: cover;
+	// background-color: rgba(181, 208, 243,.2);
+	color: #000;
+	@include base;
+	@include tags;
+	@include dataManage;
+}
