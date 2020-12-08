@@ -7,25 +7,13 @@ function resolve(dir) {
 }
 
 module.exports = {
-  baseUrl: './',
+  publicPath: './',
   assetsDir: './',
   outputDir: 'dist/dist',
   devServer: {
     proxy: {
       '/api': {
-        // target: 'https://192.168.14.188:8443',
-        // target: 'https://47.97.214.92:8443', // 线上
-        // target: 'http://192.170.15.45:8443', // 刘冠业本地
-        // target: 'https://192.170.23.224:8443', // 中间大屏内网后端接口地址
-        // target:'http://127.0.0.1:18443',
-        // target: 'http://115.236.164.82:18443',
         target: 'http://192.170.23.226:18443', // ceshi
-        // target: 'http://192.170.15.93:18443', // 本地
-
-        // target: 'https://192.170.40.212:8443', // 焦自然公司
-        // target: 'https://192.168.43.15:8443', // 焦自然省厅外网
-        // target: 'https://10.118.58.143:8443', // 焦自然省厅内网
-        // target: 'http://win.ngrok.xiaomiqiu.cn',
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/'
@@ -33,38 +21,28 @@ module.exports = {
       }
     }
   },
-  lintOnSave: false,
+  lintOnSave: false, // eslint-loader 是否在保存的时候检查
   // productionSourceMap：{ type:Bollean,default:true } 生产源映射
-  productionSourceMap: false,
+  productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
   chainWebpack: config => {
-    config.externals({
+    config.externals({ //将需要忽略打包的都写在这个里面，但前提是index.html文件里面必须script引入
       httpConfig: 'httpConfig',
-      jquery: 'window.jQuery',
-      BMap: 'BMap',
-      AMap: 'AMap',
-      AMapUI: 'AMapUI'
+      jquery: 'window.jQuery'
     });
-    config.devServer.set('disableHostCheck', true);
-    config.resolve.extensions.add('.vue')
+    config.devServer.set('disableHostCheck', true); // 是否关闭用于DNS重绑定的HTTP请求的host检查,通常用于搭配 --host 0.0.0.0 使用，因为你想要其它设备访问你本地的服务，但访问时是直接通过 IP 地址访问而不是 HOST 访问，所以需要关闭 HOST 检查
+    config.resolve.extensions // 引入组件可以省略的文件后缀名
+      .add('.vue')
       .add('.scss');
-    config.resolve.alias
+    config.resolve.alias // 设置别名
       .set('@', resolve('src'))
       .set('assets', resolve('src/assets'))
       .set('components', resolve('src/components'))
       .set('views', resolve('src/views'));
   },
-  pwa: {
-    iconPath: {
-      favicon32: './zflogo.png',
-      favicon16: './zflogo.png',
-      appleTouchIcon: './zflogo.png',
-      maskIcon: './zflogo.png',
-      msTileImage: './zflogo.png'
-    }
-  },
+  pwa: {},
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
-      config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
+      config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true; // 清除线上console
     }
     config.entry.app = ['babel-polyfill', './src/main.js'];
   }
