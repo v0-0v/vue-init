@@ -2,7 +2,7 @@ import md5 from 'js-md5';
 import storageMode from '@/storage';
 import XLSX from 'xlsx';
 import crypto from './crypto';
-import toExport from './downloadPDF';
+// import toExport from './downloadPDF'; // ie10及以下不兼容报错
 
 const addZero = item => {
   item = item < 10 ? '0' + item : item;
@@ -630,5 +630,5 @@ export default {
   transExcel,
   group,
   fontSizeEchart,
-  toExport
+  // toExport
 };

@@ -1,7 +1,7 @@
 // --------------------------------------------------
 // 接口规范相关
 // --------------------------------------------------
-const SrvConf = {
+var SrvConf = {
   invoke_source: 2303
 };
 
@@ -17,7 +17,7 @@ const SrvConf = {
  * @type {string}
  */
 
-const serverName = '/api/'; // 打包不需要改，服务器做过重定向
+var serverName = '/api/'; // 打包不需要改，服务器做过重定向
 // const serverName = 'http://10.36.217.202:18443/;'; // 温州内网
 // const serverName = 'http://115.236.164.82:18443/'; // 公司线上_旧
 // const serverName = 'http://192.170.24.81:18443/'; // 公司线上
@@ -28,13 +28,13 @@ const serverName = '/api/'; // 打包不需要改，服务器做过重定向
  * <p>正式发布环境通过网址前缀来进行API访问。</p>
  * @type {string}
  */
-const serverPath = '';
+var serverPath = '';
 
 /**
  * 该配置主要用于初始化 axios 请求参数，可参照 axios 的默认配置进行设置
  * @type {{baseURL : string, timeout : number, responseType : string}}
  */
-const LocalConf = {
+var LocalConf = {
   // `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。
   // 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL
   baseURL: serverPath + serverName,
