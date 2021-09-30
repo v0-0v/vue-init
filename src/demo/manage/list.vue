@@ -9,7 +9,11 @@
     >
       <el-table-column v-for="(th,index) in colList" :key="index" :prop="th.name" :label="th.label"></el-table-column>
       <el-table-column label="操作" prop="selected" width="100px">
-        <el-button size="small" type="danger">删除</el-button>
+        <el-row>
+          <el-col>
+            <el-button icon="el-hg-icon-detail">详情</el-button>
+          </el-col>
+        </el-row>
       </el-table-column>
     </el-table>
   </div>

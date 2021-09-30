@@ -13,6 +13,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import popover from './plugs/popover';
 // date format filter
 import datePipe from './filters/date';
+import '@/assets/icon/iconfont.css';
 
 Vue.filter('date', datePipe);
 Vue.use(ElementUI);
