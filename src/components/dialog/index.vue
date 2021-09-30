@@ -12,7 +12,7 @@
       class="hg-dailgo-bg-resize"
       @dragging="onDrag"
       @resizing="onResize"
-      parent=".hg-dailgo-bg"
+      :parent="false"
       :maximize="true"
       :drag-handle="'.drag-handle'">
       <div class="hg-dailgo" style="height: 100%">

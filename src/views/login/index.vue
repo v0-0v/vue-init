@@ -571,8 +571,6 @@ $dark_gray: #889aa4;
 $light_gray: #eee;
 
 .login-container {
-  // background: url("../../assets/img/loginback.png") no-repeat;
-  // background: url("../../assets/img/loginback2.jpg") no-repeat;
   background: url("../../assets/img/bg.jpg") no-repeat;
   background-size: cover;
   position: fixed;

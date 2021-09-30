@@ -1,8 +1,6 @@
 <template>
   <div class="saveEchart-warp" :style="'top:'+top+'px;right:'+right+'px'">
-    <svg class="myIconStyle" aria-hidden="true" @click="showDialog">
-      <use :xlink:href="'#icon-img7'"></use>
-    </svg>
+    <i class="el-icon-document-checked" @click="showDialog"></i>
 
     <my-dialog :show="bShowDialog" @close="closeDialog" @toSave="toSave" />
   </div>

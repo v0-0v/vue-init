@@ -1,5 +1,6 @@
 <template>
   <div class="home standing">
+    <h2>数据管理页面demo</h2>
     <div class="standing-bar">
       <search></search>
       <el-row>
@@ -39,7 +40,7 @@ export default {
     };
   },
   mounted() {
-    // this.test();
+    // this.getList();
     this.dataList = [
       {
         name: 'test'
@@ -48,14 +49,6 @@ export default {
   },
   methods: {
     getList() {},
-    test() {
-      this.$services.get({
-        type: 'LOGIN',
-        url: 'test'
-      }).then(keyIv => {
-        
-      });
-    },
     showDialog() {
       this.isDialog = true;
     },

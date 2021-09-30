@@ -5,9 +5,7 @@
       <template v-if="items.children && items.leaf">
         <el-submenu :key="items.id" :index="items.code">
           <template slot="title">
-            <svg class="myIconStyle" aria-hidden="true">
-              <use :xlink:href="'#' + items.icon"></use>
-            </svg>
+            <i v-if="item.icon" :class="item.icon"></i>
             <span slot="title">{{items.name}}</span>
           </template>
           <!-- 递归 -->
@@ -16,9 +14,7 @@
       </template>
       <template v-else>
         <el-menu-item v-if="items.showMenu!==false" :index="items.code" :key="items.id" @click.native="goPage(items)">
-          <svg class="myIconStyle" aria-hidden="true">
-            <use :xlink:href="'#' + items.icon"></use>
-          </svg>
+          <i v-if="item.icon" :class="item.icon"></i>
           <span slot="title">{{items.name}}</span>
         </el-menu-item>
       </template>

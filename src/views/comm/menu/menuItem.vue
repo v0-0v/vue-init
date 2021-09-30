@@ -1,9 +1,6 @@
 <template>
   <el-menu-item v-if="item.showMenu!==false" :index="item.code" @click.native="goPage(item.id)">
-    <!-- <i v-if="item.icon" :class="item.icon"></i> -->
-    <svg class="myIconStyle" aria-hidden="true">
-      <use :xlink:href="'#' + item.icon"></use>
-    </svg>
+    <i v-if="item.icon" :class="item.icon"></i>
     <span slot="title">{{item.name}}</span>
   </el-menu-item>
 </template>
@@ -41,12 +38,4 @@ export default {
 </script>
 
 <style scoped>
-.myIconStyle {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  overflow: hidden;
-  color: #909399;
-  margin-right: 5px;
-}
 </style>

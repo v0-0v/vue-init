@@ -11,9 +11,6 @@ import toaster from '@/utils/toaster';
 import 'url-search-params-polyfill';
 import 'element-ui/lib/theme-chalk/index.css';
 import popover from './plugs/popover';
-import '@/assets/icon/iconfont.css';
-import '@/assets/icon2/iconfont.css';
-import '@/assets/icon2/iconfont.js';
 // date format filter
 import datePipe from './filters/date';
 

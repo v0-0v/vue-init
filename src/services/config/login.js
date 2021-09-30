@@ -4,5 +4,5 @@
  */
 export default {
   $getway: '',
-
+  test: 'api/hosts/batch/retrieve/'
 };

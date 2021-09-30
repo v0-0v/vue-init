@@ -1,10 +1,10 @@
 [
 	{
-		"name": "首页",
+		"name": "部署探针",
 		"id": "0",
 		"code": "00",
 		"path": "/",
-		"icon": "icon-img1",
+		"icon": "el-icon-s-home",
 		"component": "home/index",
 		"componentName": "home",
 		"routerPath": "/"

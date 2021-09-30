@@ -9,8 +9,7 @@ $drop-bg: rgba(12, 37, 58, 0.9); //下拉框背景色
 $drop-hoverbg: rgba(52, 130, 197, 1); //下拉框选中颜色
 
 @mixin icon {
-	span,
-	.myIconStyle {
+	span {
 		color: $color-lightblue;
 	}
 }
@@ -25,6 +24,6 @@ $drop-hoverbg: rgba(52, 130, 197, 1); //下拉框选中颜色
 	color: #fff;
 	@include base;
 	@include tags;
-	@include dataManage;
+	@include details;
 }
 

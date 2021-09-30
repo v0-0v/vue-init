@@ -1,5 +1,5 @@
 <template>
-  <div class="search-box">
+  <div class="">
     <el-form ref="form" :inline="true" :model="ruleForm" :rules="rules" class="demo-form-inline">
       <el-form-item label="资源名称：" prop="name">
         <el-input v-model="ruleForm.name" style="max-width:180px;" ></el-input>
@@ -26,7 +26,7 @@ export default {
     submit() {
       this.$refs['form'].validate(valid => {
         if (valid) {
-          this.$emit('getResourceList', this.ruleForm);// emit
+        //   this.$emit('getResourceList', this.ruleForm);// emit
         }
         else {
           return false;

@@ -12,7 +12,6 @@ export default {
   name: 'app',
   computed: {
     ...mapGetters({
-      userInfor: 'user/userInfor',
       currentSkin: 'skin/currentSkin'
     })
   },
@@ -20,28 +19,7 @@ export default {
     ...mapActions({
       setMenuData: 'user/setMenuData',
       initRouters: 'roleRouter/initRouters',
-      getUserInfor: 'user/getUserInfor',
-      setResourceData: 'user/setResourceData'
     }),
-    async getUserByFunctionResource() {
-      const roleIdList = this.userInfor.roleId.split(',');
-      const ids = [];
-      roleIdList.forEach(value => {
-        ids.push({
-          value
-        });
-      });
-      const res = await this.$services.post({
-        type: 'USERMANGEMENT',
-        url: 'getUserByFunctionResource',
-        params: {
-          ids: JSON.stringify(ids)
-        }
-      });
-      if (res.bean[0]) {
-        this.setResourceData(res.bean[0].code);
-      }
-    },
     /**
      * 加载资源时的loading动画
      */
@@ -67,44 +45,7 @@ export default {
     this.setMenuData().then(menu => {
       this.initRouters(menu);
     });
-    return;
-    this.getUserInfor().then(() => {
-      if(this.$route.path === '/login'){
-        return;
-      }
-      else if (!this.userInfor) {
-        console.log('app.vue里created')
-        this.$router.push('/login');
-      }
-      else {
-        this.setLoding();
-      }
-    });
   },
-  watch: {
-    userInfor: {
-      handler(obj) {
-        if (this.$route.path === '/login') {
-          return
-        }
-        else if (!obj) {
-          console.log('app.vue里watch')
-          this.$router.push('/login');
-        }
-        else {
-          this.setLoding();
-          this.setMenuData().then(menu => {
-            this.initRouters(menu)
-                .then(() => {
-                  this.cancelLoading();
-                });
-          });
-          this.getUserByFunctionResource();
-        }
-      },
-      deep: true
-    }
-  }
 };
 </script>
 

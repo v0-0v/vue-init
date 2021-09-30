@@ -11,14 +11,11 @@ import 'nprogress/nprogress.css';// progress bar style
 
 NProgress.configure({ showSpinner: false });// NProgress Configuration
 // 设置路由白名单
-const whiteList = ['login', 'loginError'];
+const whiteList = [];
 
 const beforeEach = (to, from, next) => {
   NProgress.start();
   // 检测用户token是否存在，塞入请求header
-  console.log('路由拦截----111', to.name);
-  console.log('路由拦截----', whiteList.indexOf(to.name));
-  console.log('路由拦截', $utils.getToken());
   if ($utils.getToken()) {
     $services.setHeader({
       key: 'tokenId',
@@ -26,8 +23,8 @@ const beforeEach = (to, from, next) => {
     });
   }
   else if (whiteList.indexOf(to.name) === -1) {
-    next('/login');
-    // next();
+    // next('/login');
+    next();
     return;
   }
   next();

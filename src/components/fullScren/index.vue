@@ -94,18 +94,18 @@ export default {
     cursor: pointer;
   }
   .toFull{
-    background: url("../../assets/img/fullScren.png") no-repeat;
+    background: url("../../assets/img/components/fullScren.png") no-repeat;
     background-size: 100% 100%;
   }
   .toExitFull{
-    background: url("../../assets/img/exitFull.png") no-repeat;
+    background: url("../../assets/img/components/exitFull.png") no-repeat;
     background-size: 100% 100%;
   }
   .hiddenIcon{
     background: none;
   }
   .hiddenIcon:hover{
-    background: url("../../assets/img/exitFull.png") no-repeat;
+    background: url("../../assets/img/components/exitFull.png") no-repeat;
     background-size: 100% 100%;
   }
 }

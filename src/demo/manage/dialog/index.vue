@@ -60,7 +60,7 @@ export default {
         {
           name: 'type',
           label: '组件类型'
-        },
+        }
       ],
       paginObj: {
         currentPage: 1,

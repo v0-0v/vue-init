@@ -9,13 +9,13 @@
   <div>
     <img src="../../assets/img/zflogo.png" height="40">
     <div class="headerTitle-warp">
-      <span class="title">平安政法分析预警平台</span>
-      <span class="text">Wenzhou Ping'an Political Law Analysis and Early Warning Platform</span>
+      <span class="title">探针管理平台</span>
+      <span class="text">Probe Management Platform</span>
     </div>
     <div class="handle-warp">
-      <p><img src="../../assets/img/smile.png" style="height: 20px;verticalAlign: middle;" /> {{hello}}！欢迎登陆平安政法分析预警平台</p>
+      <p><img src="../../assets/img/smile.png" style="height: 20px;verticalAlign: middle;" /> {{hello}}！欢迎登陆探针管理平台</p>
       <div>
-        <el-dropdown class="el-dropdown-box">
+        <!-- <el-dropdown class="el-dropdown-box">
           <span class="el-dropdown-link" :style="currentSkin.name === '透明' ? 'cursor:pointer;color:#fff;' : 'cursor:pointer;color:#565758;'">
             <i>
               <img src="../../assets/img/yonghu.png" class="dropIcon" v-if="currentSkin.name === '透明'" />
@@ -26,7 +26,7 @@
             <el-dropdown-item @click.native="showPassword=true">修改密码</el-dropdown-item>
             <el-dropdown-item @click.native="loginOut" divided>退出</el-dropdown-item>
           </el-dropdown-menu>
-        </el-dropdown>
+        </el-dropdown> -->
         <span class="el-dropdown-box" style="cursor:pointer;">
           <i v-if="!isQuanPing">
             <img src="../../assets/img/quanping.png" class="dropIcon" @click="toQuanPing" v-if="currentSkin.name === '透明'" />

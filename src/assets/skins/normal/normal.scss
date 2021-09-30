@@ -13,8 +13,7 @@ $light-font:rgb(86, 87, 88);
 
 @mixin icon {
 
-	span,
-	.myIconStyle {
+	span {
 		color: $color-lightblue;
 	}
 }
@@ -30,5 +29,5 @@ $light-font:rgb(86, 87, 88);
 	color: #000;
 	@include base;
 	@include tags;
-	@include dataManage;
+	@include details;
 }
