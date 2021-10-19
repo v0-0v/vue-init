@@ -113,6 +113,7 @@ class HttpUtil {
     options.credentials = this.credentials;
     if ({} !== this.bodys && this.method !== 'GET') {
       if ('form' === this.body_type) {
+        // 提交浏览器的原生 form 表单
         this.setHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
         let data = '';
         Object.keys(this.bodys)
@@ -123,6 +124,8 @@ class HttpUtil {
         options.body = data;
       }
       else if ('file' === this.body_type) {
+        // 提交FormData表单
+        this.setHeader('Content-Type', 'multipart/form-data;charset=UTF-8');
         let data = new FormData();
         Object.keys(this.bodys)
         .map((index) => {
@@ -131,36 +134,35 @@ class HttpUtil {
         options.body = data;
       }
       else if ('json' === this.body_type) {
-        // this.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        // 提交 JSON 字符串
+        this.setHeader('Content-Type', 'application/json;charset=UTF-8');
         options.body = JSON.stringify(this.bodys);
       }
       else if ('urlSearch' === this.body_type) {
-        // let data = new URLSearchParams();
-        // Object.keys(this.bodys)
-        // .map((index) => {
-        //   data.append(index, this.bodys[index]);
-        // });
-
-        // this.setHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
-        // let data = '';
-        // Object.keys(this.bodys)
-        // .map((index) => {
-        //   let param = encodeURI(this.bodys[index]);
-        //   console.log(this.bodys[index], param)
-        //   data += `${index}=${param}&`;
-        //   data += str;
-        // });
-        
-        // options.body = data.substring(0, data.length - 1);
-        let data = new FormData();
+        // 提交路径拼接参数
+        let data = new URLSearchParams();
         Object.keys(this.bodys)
         .map((index) => {
           data.append(index, this.bodys[index]);
         });
-        options.body = data
+        options.body = data.substring(0, data.length - 1);
       }
     }
+    else if ('getUrl' === this.body_type) {
+      // get方式，参数在路径中间，paramsArr为要拼接的参数数组，endUrl为后部分路径
+      // 如：this.bodys = {paramsArr:['taskid','username'],endUrl:'resule/'}
+      // 最后请求为：plays/single/<str:taskid>/<str:username>/result/
+      let data = '';
+      this.bodys.paramsArr && this.bodys.paramsArr
+      .map((param) => {
+        data += `${param}/`;
+      });
+      data +=this.bodys.endUrl;
+      this.bodys = {};
+      this.url = this.url + data;
+    }
     else {
+      // get方式
       let data = '';
       Object.keys(this.bodys)
       .map((index) => {
