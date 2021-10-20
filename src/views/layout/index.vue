@@ -1,10 +1,10 @@
 <template>
   <div class="home_index" v-loading="loading">
-    <el-container style="display:block;">
+    <el-container style="display:block;overflow:auto;">
       <el-header class="top_header">
         <top-header/>
       </el-header>
-      <el-container class="container" style="height: calc(100% - 60px);width:100%;">
+      <el-container class="container" style="height: calc(100% - 60px);width:100%;min-width: 1120px;">
         <el-aside width="auto" style="overflow-x: hidden;z-index:7;">
           <left-menu/>
         </el-aside>
@@ -55,6 +55,7 @@ export default {
 
   .top_header {
     background-color: #2b2f32;
+    min-width: 1120px;
 
     > div > img {
       display: inline-block;
