@@ -75,6 +75,26 @@ export default {
       });
     return res;
   },
+  // post-参数在路径中间，paramsArr为要拼接的参数数组，endUrl为后部分路径，params为传递参数
+  // 如：params = {paramsArr:['taskid','username'],endUrl:'resule/',params:{id:'111'}}
+  // 最后请求为：plays/single/<str:taskid>/<str:username>/result/，参数为{id:'111'} // JSON 字符串
+  async postUrl(url, params = {}) {
+    let res = await httpUntil.setBodyType('postUrl')
+      .setUrl(LocalConf.baseURL + url)
+      .setMethod('POST')
+      .setBody(params)
+      .send()
+      .then(data => data)
+      .catch(error => {
+        console.warn('=> catch: ', error);
+        if (error.toString() === 'Error: request timeout') {
+          return {
+            msg: '请求超时'
+          };
+        }
+      });
+    return res;
+  },
   // post-参数为json字符串
   async postJson(url, params = {}) {
     let res = await httpUntil.setBodyType('json')

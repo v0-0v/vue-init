@@ -147,6 +147,24 @@ class HttpUtil {
         });
         options.body = data.substring(0, data.length - 1);
       }
+      else if ('postUrl' === this.body_type) {
+        // post方式，参数在路径中间，paramsArr为要拼接的参数数组，endUrl为后部分路径，params为传递参数
+        // 如：this.bodys = {paramsArr:['taskid','username'],endUrl:'resule/',params:{id:'111'}}
+        // 最后请求为：plays/single/<str:taskid>/<str:username>/result/，参数为{id:'111'} // JSON 字符串
+        let data = '';
+        this.bodys.paramsArr && this.bodys.paramsArr
+        .map((param) => {
+          data += `${param}/`;
+        });
+        data +=this.bodys.endUrl;
+        this.url = this.url + data;
+
+        if (this.bodys.params) {
+          this.setHeader('Content-Type', 'application/json;charset=UTF-8');
+          options.body = JSON.stringify(this.bodys.params);
+        }
+        this.bodys = {};
+      }
     }
     else if ('getUrl' === this.body_type) {
       // get方式，参数在路径中间，paramsArr为要拼接的参数数组，endUrl为后部分路径

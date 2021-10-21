@@ -110,6 +110,24 @@ const parseTimeNumber = val => {
 
   return _time;
 };
+// /* UTC时间戳转换成"yyyy-mm-dd hh:mm:ss"格式 */
+const getUTCTime = time => {
+  // 转为正常的时间格式 年-月-日 时:分:秒
+  let T_pos = time.indexOf('T');
+  let Z_pos = time.indexOf('Z');
+  let year_month_day = time.substr(0, T_pos);
+  let hour_minute_second = time.substr(T_pos + 1, Z_pos - T_pos - 1);
+  let new_datetime = year_month_day + ' ' + hour_minute_second; // 2021-10-20T09:41:51.889145Z 转化为 2021-10-20 09:41:51.889145
+
+  // 处理成为时间戳
+  let timestamp = new Date(new_datetime);
+  timestamp = timestamp.getTime();
+  timestamp /= 1000;
+  // 增加8个小时，北京时间比utc时间多八个时区
+  timestamp += 8 * 60 * 60;
+  // 时间戳转为时间
+  return getTime(timestamp * 1000);
+}
 
 const transforTree = treeData => {
   if (!treeData || treeData.length === 0) {
@@ -600,6 +618,7 @@ export default {
   getTimeALL,
   getTime2,
   parseTimeNumber,
+  getUTCTime,
   transforTree,
   getTimeToMonth,
   getTimeToDay,

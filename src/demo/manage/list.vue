@@ -50,10 +50,7 @@ export default {
           name: 'createDate',
           label: '创建时间'
         }
-      ],
-      oActiveItem: null,
-      bShowEditDialog: false,
-      selectId: ''
+      ]
     };
   },
   methods: {

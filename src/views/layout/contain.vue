@@ -8,7 +8,7 @@
     <!--<breadcumb/>-->
     <div class="content" id="divScroll">
       <transition name="fade-transform" mode="out-in">
-        <keep-alive :include="cachedViews"  :exclude="['largeShow','largeCenter','largeLeft','largeRight','largeQidu','largeQiduTwo']">
+        <keep-alive :include="cachedViews"  :exclude="[]">
           <router-view :key="key"></router-view>
         </keep-alive>
       </transition>

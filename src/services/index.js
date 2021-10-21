@@ -182,6 +182,45 @@ export default {
     }
     return res;
   },
+  async postUrl({
+    type,
+    url,
+    params = {},
+    storageType = 'sessionStorage',
+    cache = false,
+    reflush = false
+  }) {
+    let urlKey = `${ServiceConf[type]['$getway']}/${ServiceConf[type][url]}`;
+    const storage = storageM[storageType];
+    if (cache) {
+      let storageData = storage.$get({ key: urlKey });
+      if (storageData && !reflush) {
+        return storageData;
+      }
+    }
+    let res = await service.postUrl(urlKey, params);
+    if (res && res.code === '000') {
+      res.status = true;
+      if (cache) {
+        storage.$set({
+          key: urlKey,
+          parameter: res
+        });
+      }
+    }
+    else if (router.app.$route.fullPath === '/login') {
+      return res;
+    }
+    else if (res && res.code === '101' || res && res.code === '110' || res && res.code === '112') {
+      loginOver();
+    }
+    else {
+      res.status = false;
+      const msg = res.msg ? res.msg : '操作异常';
+      Message.error(msg);
+    }
+    return res;
+  },
   async postJson({
     type,
     url,
