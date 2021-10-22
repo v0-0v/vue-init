@@ -6,7 +6,7 @@
 import Vue from 'vue';
 
 export default {
-  message(t, m, d, data, cb) {
+  message(m, t, d, data, cb) {
     let options = {
       customClass: 'toaster toaster-success',
       title: t || '成功',
@@ -17,7 +17,7 @@ export default {
     };
     Vue.prototype.$message.success(options);
   },
-  error(t, m, d) {
+  error(m, t, d) {
     let options = {
       title: t || '错误',
       message: `${t}  ${m || ''}` || '错误消息',
@@ -28,7 +28,7 @@ export default {
     };
     Vue.prototype.$message.error(options);
   },
-  info(t, m, d) {
+  info(m, t, d) {
     let options = {
       title: t || '操作提示',
       message: `${t}  ${m || ''}` || '提示消息',
@@ -38,21 +38,21 @@ export default {
     };
     Vue.prototype.$message.info(options);
   },
-  warn(t, m, d) {
+  warn(m, t, d) {
     let options = {
       customClass: 'toaster toaster-warn',
       title: t || '警告',
-      message: t || '警告消息',
+      message: m || '警告消息',
       duration: d || 1500,
       type: 'warning',
       showClose: true
     };
     Vue.prototype.$message.warning(options);
   },
-  ok(t, m, d) {
+  ok(m, t, d) {
     let options = {
       title: t || '成功',
-      message: t || '操作成功',
+      message: m || '操作成功',
       duration: d || 1500,
       type: 'success',
       showClose: true

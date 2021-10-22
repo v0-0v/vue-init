@@ -17,7 +17,8 @@ export default {
   },
   // get-参数拼接在路径后
   async get(url, params = {}) {
-    let res = await httpUntil.setUrl(LocalConf.baseURL + url)
+    let res = await httpUntil.setBodyType('form')
+      .setUrl(LocalConf.baseURL + url)
       .setMethod('GET')
       .setBody(params)
       .send()
