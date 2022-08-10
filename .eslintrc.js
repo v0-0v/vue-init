@@ -28,7 +28,7 @@ module.exports = {
     // 语句块内的前后是否需要空白行隔开
     'padded-blocks': 'off',
     // 强制驼峰法命名规则
-    'camelcase': 'off',
+    camelcase: 'off',
     // Object 属性是否必须在新的一行书写
     'object-curly-newline': 'off',
     // 不检测行的最大长度（考虑到 base64 图片编码）
@@ -60,7 +60,7 @@ module.exports = {
     // 是否检测 class 中的 method 是否包含 this 引用，否则推荐 static 修饰成静态方法
     'class-methods-use-this': 'off',
     // 是否允许空语句块
-    'no-empty': ['error', { 'allowEmptyCatch': true }],
+    'no-empty': ['error', { allowEmptyCatch: true }],
     // 禁止出现未使用的表达式
     'no-unused-expressions': 'off',
     // 禁止变量和方法的前置下划线，类定义私有成员要用到
@@ -72,28 +72,28 @@ module.exports = {
     // 要求或禁止语句块 {} 之前是否有空格
     'space-before-blocks': ['error', 'always'],
     // 函数定义时括号前是否需要空格
-    'space-before-function-paren': ['error', { 'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always' }],
+    'space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
     // 是否允许使用 console 语句
     // 'no-console': ['error', { 'allow': ['warn', 'error'] }],
-    'no-console': process.env.NODE_ENV === 'production' ? ['error', { 'allow': ['warn', 'error'] }] : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? ['error', { allow: ['warn', 'error'] }] : 'off',
     // 箭头函数的函数体样式：是否需要｛｝包含
-    'arrow-body-style': ['error', 'as-needed', { 'requireReturnForObjectLiteral': true }],
+    'arrow-body-style': ['error', 'as-needed', { requireReturnForObjectLiteral: true }],
     // 箭头函数的参数表是否需要括号包起来
     'arrow-parens': ['error', 'as-needed'],
     // 匿名函数是否需要规定函数名
     'func-names': ['error', 'as-needed'],
     // 大括号的换行风格
-    'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
+    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     // 当存在更简单的三元运算写法时，是否简化如：“x ? x : ''”开启时需要简化为 “x || ''”
-    'no-unneeded-ternary': ['error', { 'defaultAssignment': true }],
+    'no-unneeded-ternary': ['error', { defaultAssignment: true }],
     // 属性访问时用 . 还是 []，允许关键字
     'dot-notation': 'off',
     // 是否强制要求函数统一 return value 格式
     'consistent-return': 'off',
-    "no-restricted-syntax": 0,
+    'no-restricted-syntax': 0,
     // 是否提示优化 \ 的使用
     'no-useless-escape': 'off',
     // 是否要求变量提前声明
-    'no-use-before-define': ['error', { 'functions': false, 'classes': false }]
+    'no-use-before-define': ['error', { functions: false, classes: false }]
   }
 };

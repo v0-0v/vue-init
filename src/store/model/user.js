@@ -4,7 +4,7 @@
 // created: 2019/1/22
 // -----------------------------------------------------------------------------
 // state
-import services from '../../services';
+// import services from '../../services';
 import utils from '../../utils';
 import menu from '@/mock/menu.json';
 
@@ -20,7 +20,7 @@ const Getters = {
   menuData: state => state.menuData,
   resourceData: state => state.resourceData,
   userInfor: state => state.userInfor,
-  getIsRemember: state => utils.getStorage({
+  getIsRemember: () => utils.getStorage({
     type: 'localStorage',
     key: 'isRemember'
   }),

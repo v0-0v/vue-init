@@ -1,4 +1,5 @@
 export function generateChart(chartId, chartType) {
+  console.log(chartType);
   return {
     render(createElement) {
       return createElement(
@@ -64,18 +65,18 @@ export function generateChart(chartId, chartType) {
         if (this.$data._chart) {
           return this.$data._chart.generateLegend();
         }
-      },
-      renderChart(data, options) {
-        if (this.$data._chart) this.$data._chart.destroy();
-        this.$data._chart = new Chart(
-          this.$refs.canvas.getContext('2d'), {
-            type: chartType,
-            data,
-            options,
-            plugins: this.$data._plugins
-          }
-        );
       }
+      // renderChart(data, options) {
+      //   if (this.$data._chart) this.$data._chart.destroy();
+      //   this.$data._chart = new Chart(
+      //     this.$refs.canvas.getContext('2d'), {
+      //       type: chartType,
+      //       data,
+      //       options,
+      //       plugins: this.$data._plugins
+      //     }
+      //   );
+      // }
     },
     beforeDestroy() {
       if (this.$data._chart) {

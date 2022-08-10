@@ -25,7 +25,7 @@ module.exports = {
   // productionSourceMap：{ type:Bollean,default:true } 生产源映射
   productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
   chainWebpack: config => {
-    config.externals({ //将需要忽略打包的都写在这个里面，但前提是index.html文件里面必须script引入
+    config.externals({ // 将需要忽略打包的都写在这个里面，但前提是index.html文件里面必须script引入
       httpConfig: 'httpConfig',
       jquery: 'window.jQuery'
     });

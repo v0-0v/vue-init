@@ -25,7 +25,7 @@ import HgDialog from '@/components/dialog';
 export default {
   name: 'impHgDialog',
   components: {
-    HgDialog,
+    HgDialog
   },
   props: {
     show: {

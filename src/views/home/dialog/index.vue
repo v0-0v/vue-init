@@ -25,7 +25,7 @@ import HgDialog from '@/components/dialog';
 export default {
   name: 'impHgDialog',
   components: {
-    HgDialog,
+    HgDialog
   },
   props: {
     show: {
@@ -60,7 +60,7 @@ export default {
         {
           name: 'type',
           label: '组件类型'
-        },
+        }
       ],
       paginObj: {
         currentPage: 1,

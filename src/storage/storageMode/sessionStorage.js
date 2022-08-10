@@ -13,7 +13,8 @@ const session = new class {
         let arrayData = [parameter, overdueTime];
         this.sessionStorage.setItem(key, JSON.stringify(arrayData));
         console.warn(`sessionStorage缓存用户数据${parameter}`);
-      } else {
+      }
+      else {
         console.warn(`读取sessionStorage缓存用户数据${parameter}`);
         return getData;
       }

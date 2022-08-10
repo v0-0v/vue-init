@@ -18,7 +18,7 @@ export default {
   methods: {
     ...mapActions({
       setMenuData: 'user/setMenuData',
-      initRouters: 'roleRouter/initRouters',
+      initRouters: 'roleRouter/initRouters'
     }),
     /**
      * 加载资源时的loading动画
@@ -45,7 +45,7 @@ export default {
     this.setMenuData().then(menu => {
       this.initRouters(menu);
     });
-  },
+  }
 };
 </script>
 

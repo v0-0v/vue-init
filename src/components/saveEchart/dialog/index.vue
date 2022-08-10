@@ -43,7 +43,7 @@ export default {
       insideTimeList: []
     };
   },
-   methods: {
+  methods: {
     ...mapGetters({
       userInfor: 'user/userInfor'
     }),
@@ -99,7 +99,7 @@ export default {
       }
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

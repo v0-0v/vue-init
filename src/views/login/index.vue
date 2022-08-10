@@ -111,13 +111,10 @@ export default {
     // setup();
     this.init();
     let versionMess = this.bro();
-    if (!versionMess.type) {
-
-    }
-    else if (versionMess.type === 'Chrome' && versionMess.version.substring(0, 2) < 43) {
+    if (versionMess.type && versionMess.type === 'Chrome' && versionMess.version.substring(0, 2) < 43) {
       this.lowVersion = true;
     }
-    else if (versionMess.type === 'Firefox' && versionMess.version.substring(0, 2) < 45) {
+    else if (versionMess.type && versionMess.type === 'Firefox' && versionMess.version.substring(0, 2) < 45) {
       this.lowVersion = true;
     }
     this.getRememberStatus();
@@ -170,28 +167,28 @@ export default {
         return { type: 'IE', version: ver };
       }
       // firefox
-      else if (explorer.indexOf('firefox') >= 0) {
+      if (explorer.indexOf('firefox') >= 0) {
         let ver = explorer.match(/firefox\/([\d.]+)/)[1];
         return { type: 'Firefox', version: ver };
       }
       // Chrome
-      else if (explorer.indexOf('chrome') >= 0) {
+      if (explorer.indexOf('chrome') >= 0) {
         let ver = explorer.match(/chrome\/([\d.]+)/)[1];
         return { type: 'Chrome', version: ver };
       }
       // Opera
-      else if (explorer.indexOf('opera') >= 0) {
+      if (explorer.indexOf('opera') >= 0) {
         let ver = explorer.match(/opera.([\d.]+)/)[1];
         return { type: 'Opera', version: ver };
       }
       // Safari
-      else if (explorer.indexOf('Safari') >= 0) {
+      if (explorer.indexOf('Safari') >= 0) {
         let ver = explorer.match(/version\/([\d.]+)/)[1];
         return { type: 'Safari', version: ver };
       }
-      else {
-        return {}
-      }
+
+      return {};
+
     },
     getKeyIv() {
       this.$services.get({

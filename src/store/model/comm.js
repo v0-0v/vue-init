@@ -27,8 +27,8 @@ const Actions = {
 };
 
 export default {
-  namespaced: true, //使用了命名空间引入时需要加上模块名.模块属性
-  strict: true, //开启严格模式后只能通过mutation来改变状态（不支持异步）否则会报错
+  namespaced: true, // 使用了命名空间引入时需要加上模块名.模块属性
+  strict: true, // 开启严格模式后只能通过mutation来改变状态（不支持异步）否则会报错
   state: State,
   getters: Getters,
   actions: Actions,

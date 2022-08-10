@@ -37,7 +37,7 @@ export default {
       default: true
     }
   },
-  data () {
+  data() {
     return {
       timer: null,
       defaultBool: false,
@@ -64,7 +64,7 @@ export default {
     // ...mapActions({
     //   setCommData: 'depCode/setCommData'
     // }),
-    transforList (Obj) {
+    transforList(Obj) {
       let list = [];
       Object.keys(Obj).forEach(key => {
         let l = JSON.parse(JSON.stringify(Obj[key]));
@@ -78,7 +78,7 @@ export default {
       });
       return list;
     },
-    async getListAllChildDepTree (id, depCodes) {
+    async getListAllChildDepTree(id, depCodes) {
       let params = { id: id ? id : this.userInfor.depCode };
       // let params = {};
       // if (id) {
@@ -94,7 +94,7 @@ export default {
       this.treeData = this.transforList(this.treeObject);
       // console.log(this.treeData);
     },
-    async handleItemChange (val) {
+    async handleItemChange(val) {
       const index = val.length - 1;
       const _depcode = val[index];
       await this.getListAllChildDepTree(_depcode, val);
@@ -111,7 +111,7 @@ export default {
     /**
      *
      */
-    getCodes (tree, array, res) {
+    getCodes(tree, array, res) {
       if (array.length === 0) {
         return;
       }
@@ -127,7 +127,7 @@ export default {
       this.getCodes(tree, array, res);
 
     },
-    init () {
+    init() {
       // if (this.oTreeData.length > 0) {
       //   return new Promise(resolve => {
       //     resolve(true);
@@ -152,7 +152,7 @@ export default {
     /**
      * 数据转成treeData
      */
-    transforTree (treeData, depCodes = []) {
+    transforTree(treeData, depCodes = []) {
       if (!treeData || treeData.length === 0) {
         if (
           depCodes.length
@@ -275,7 +275,7 @@ export default {
     /**
      * 遍历循环每个节点机构
      */
-    async loopItemChange (arry, index = 1) {
+    async loopItemChange(arry, index = 1) {
       console.log('遍历循环每个节点机构', arry);
       if (index <= arry.length) {
         this.handleItemChange(arry.slice(0, index)).then(() => {
@@ -293,7 +293,7 @@ export default {
   },
   watch: {
     depCode: {
-      handler (str) {
+      handler(str) {
         console.log('**************', str);
         if (this.timer) {
           clearTimeout(this.timer);
@@ -320,7 +320,7 @@ export default {
       immediate: true
     }
   },
-  beforeDestroy () {
+  beforeDestroy() {
     clearTimeout(this.timer);
   }
 };

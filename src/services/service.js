@@ -96,5 +96,7 @@ export default {
       val
     });
   },
-  async confirm() {}
+  async confirm() {
+    // 待定
+  }
 };

@@ -35,7 +35,7 @@ export default {
         sizes: [10, 20, 40, 60, 80],
         size: 6,
         total: 0
-      },
+      }
     };
   },
   mounted() {
@@ -53,7 +53,7 @@ export default {
         type: 'LOGIN',
         url: 'test'
       }).then(keyIv => {
-        
+        console.log(keyIv);
       });
     },
     showDialog() {
@@ -65,6 +65,7 @@ export default {
     },
     // 关闭弹窗并提交
     submitDialog(select) {
+      console.log(select);
     },
     handleSizeChange(size) {
       this.paginObj['size'] = size;

@@ -182,8 +182,8 @@ export default {
         docElm.webkitRequestFullScreen();
       }
       // IE11
-      else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
+      else if (docElm.msRequestFullscreen) {
+        docElm.msRequestFullscreen();
       }
     },
     guanbi() {

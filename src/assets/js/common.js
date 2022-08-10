@@ -86,8 +86,8 @@ function toDate(value) {
       return isoStringToDate(match);
     }
   }
-  function isDate(value) {
-    return value instanceof Date && !isNaN(value.valueOf());
+  function isDate(date) {
+    return date instanceof Date && !isNaN(date.valueOf());
   }
 
   const date = new Date(value);

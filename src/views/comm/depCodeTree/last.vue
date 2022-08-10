@@ -237,6 +237,7 @@ export default {
     // this is need?
     depCode: {
       handler(str) {
+        console.log(str);
         // if (this.timer) {
         //   clearTimeout(this.timer);
         // }

@@ -18,7 +18,7 @@ export default {
     handleScroll(e) {
       const eventDelta = e.wheelDelta || -e.deltaY * 40;
       const $scrollWrapper = this.$refs.scrollContainer.$refs.wrap;
-      $scrollWrapper.scrollLeft = $scrollWrapper.scrollLeft + eventDelta / 4;
+      $scrollWrapper.scrollLeft += eventDelta / 4;
     },
     moveToTarget(currentTag) {
       const $container = this.$refs.scrollContainer.$el;
@@ -33,7 +33,7 @@ export default {
 
       // find first tag and last tag
       if (tagList.length > 0) {
-        firstTag = tagList[0];
+        [firstTag] = tagList;
         lastTag = tagList[tagList.length - 1];
       }
 
@@ -42,9 +42,11 @@ export default {
         if (tagList[i] === currentTag) {
           if (i === 0) {
             nextTag = tagList[i].length > 1 && tagList[i + 1];
-          } else if (i === tagList.length - 1) {
+          }
+          else if (i === tagList.length - 1) {
             prevTag = tagList[i].length > 1 && tagList[i - 1];
-          } else {
+          }
+          else {
             prevTag = tagList[i - 1];
             nextTag = tagList[i + 1];
           }

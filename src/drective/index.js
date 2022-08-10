@@ -7,12 +7,14 @@ import store from '../store';
 
 export default {
   install(Vue, options = {}) {
+    console.log(options);
     // 注册一个全局自定义指令 `v-focus`
     Vue.directive('focus', {
       // update(el, binding, vnode) {
       //   console.log('tangli--bind-u', binding.value);
       // },
       componentUpdated(el, binding, vnode, oldVnode) {
+        console.log(el, binding, vnode, oldVnode);
         //
         // console.log('tangli--el', el);
         const { old } = el.querySelector('input').dataset; //
@@ -93,6 +95,7 @@ export default {
         document.addEventListener('click', documentHandler);
       },
       unbind(el, binding) {
+        console.log(binding);
         // 解除事件监听
         document.removeEventListener('click', el.__vueClickOutside__);
         delete el.__vueClickOutside__;
@@ -176,7 +179,7 @@ export default {
         dragDom.style.cssText += ';top:0px;';
 
         // 获取原有属性 ie dom元素.currentStyle 火狐谷歌 window.getComputedStyle(dom元素, null);
-        const sty = (function() {
+        const sty = (function fn() {
           if (window.document.currentStyle) {
             return (dom, attr) => dom.currentStyle[attr];
           }

@@ -46,7 +46,7 @@ export default {
         this.dataAll = result[1].bean;
         this.statX = [];
         this.statY = [];
-        this.config.statList.length > 0 && this.config.statList.forEach(k => {
+        this.config.statList.length > 0 && this.config.statList.forEach(() => {
           this.statY.push([]);
         });
         console.log(this.dataAll);
@@ -74,7 +74,7 @@ export default {
               this.echartOption = this.$utils.deepCopy(echartsType.PIE);
               this.setPieData(i);
               break;
-            default: this.echartOption = LINE;
+            default: this.echartOption = echartsType.LINE;
           }
         });
       });
@@ -93,8 +93,8 @@ export default {
       let endDate = this.config.echartDate[1];
       if (this.config.echartDateMove) {
         let res = this.getPeriod(this.config.echartDate);
-        beginDate = res.beginDate;
-        endDate = res.endDate;
+        ({ beginDate } = res);
+        ({ endDate } = res);
       }
       return this.$services.post({
         type: 'PAGESOURCE',
@@ -117,9 +117,9 @@ export default {
       let year = now.getFullYear();
       let month = now.getMonth() + 1;
       let year2 = year;
-      let month2 = parseInt(month) - period;
+      let month2 = parseInt(month, 10) - period;
       if (month2 <= 0) {
-        year2 = parseInt(year2) - parseInt(month2 / 12 == 0 ? 1 : Math.abs(parseInt(month2 / 12)) + 1);
+        year2 = parseInt(year2, 10) - parseInt(month2 / 12 === 0 ? 1 : Math.abs(parseInt(month2 / 12, 10)) + 1, 10);
         month2 = 12 - (Math.abs(month2) % 12);
       }
       let res = {

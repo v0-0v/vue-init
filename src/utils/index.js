@@ -127,7 +127,7 @@ const getUTCTime = time => {
   timestamp += 8 * 60 * 60;
   // 时间戳转为时间
   return getTime(timestamp * 1000);
-}
+};
 
 const transforTree = treeData => {
   if (!treeData || treeData.length === 0) {
@@ -177,11 +177,11 @@ const debounce = (fn, delay) => {
 
 // echart字体大小
 const fontSizeEchart = (domId, size) => {
-  let clientWidth = document.getElementById(domId).clientWidth;
+  let { clientWidth } = document.getElementById(domId);
   if (!clientWidth) return 18;
   let fontSize = clientWidth / 1810;
-  return size*fontSize;
-}
+  return size * fontSize;
+};
 
 /**
  * 转义html
@@ -606,11 +606,11 @@ const transExcel = (list, tHeader, filterVal, fileName) => {
 const group = (array, subGroupLength) => {
   let index = 0;
   let newArray = [];
-  while(index < array.length) {
-      newArray.push(array.slice(index, index += subGroupLength));
+  while (index < array.length) {
+    newArray.push(array.slice(index, index += subGroupLength));
   }
   return newArray;
-}
+};
 
 export default {
   getUid,
@@ -648,6 +648,6 @@ export default {
   targetIsChange,
   transExcel,
   group,
-  fontSizeEchart,
+  fontSizeEchart
   // toExport
 };

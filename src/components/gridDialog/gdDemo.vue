@@ -46,7 +46,7 @@ export default {
         }]
       },
       dialogShow: false
-    }
+    };
   },
   methods: {
     instal() {
@@ -57,14 +57,14 @@ export default {
     },
     // 搜索事件
     selectChange(val) {
-      console.log(val, 'selectChange')
+      console.log(val, 'selectChange');
     },
     // 分页事件
     pageChange(val) {
-      console.log(val, 'pageChange')
+      console.log(val, 'pageChange');
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 </style>

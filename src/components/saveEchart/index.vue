@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      bShowDialog: false,
+      bShowDialog: false
     };
   },
   methods: {

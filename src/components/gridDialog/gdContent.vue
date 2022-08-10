@@ -18,13 +18,13 @@
 </template>
 <script>
 import { spTable, spTableColumn } from '@/components/sptable';
-import pageModle from '@/views/comm/pagination';
+// import pageModle from '@/views/comm/pagination';
 
 export default {
   components: {
     spTable,
-    spTableColumn,
-    pageModle
+    spTableColumn
+    // pageModle
   },
   props: ['col', 'tableData'],
   data() {

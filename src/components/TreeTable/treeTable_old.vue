@@ -19,7 +19,9 @@
       <template slot-scope="scope">
         <!-- Todo -->
         <!-- eslint-disable-next-line vue/no-confusing-v-for-v-if -->
-        <span v-for="space in scope.row._level" v-if="index === 0" :key="space" class="ms-tree-space"/>
+        <template v-if="index === 0">
+          <span v-for="space in scope.row._level" :key="space" class="ms-tree-space"/>
+        </template>
         <span v-if="iconShow(index,scope.row)" class="tree-ctrl" @click="toggleExpanded(scope.$index)">
           <i v-if="!scope.row._expanded" class="el-icon-plus"/>
           <i v-else class="el-icon-minus"/>
@@ -32,22 +34,22 @@
 </template>
 
 <script>
-  /**
+/**
    Auth: Lei.j1ang
    Created: 2018/1/19-13:59
    */
-  import treeToArray from './eval';
+import treeToArray from './eval';
 
-  export default {
-    name: 'TreeTable',
-    data() {
-      return {
-        chooseson: true, //全选
-        key: true //单个点击直到全部选中
-      };
-    },
-    props: {
-      /* eslint-disable */
+export default {
+  name: 'TreeTable',
+  data() {
+    return {
+      chooseson: true, // 全选
+      key: true // 单个点击直到全部选中
+    };
+  },
+  props: {
+    /* eslint-disable */
       data: {
         type: [Array, Object],
         required: true
